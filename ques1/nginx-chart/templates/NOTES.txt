@@ -1,0 +1,15 @@
+{{- if .Values.ingress -}}
+NGINX Ingress is {{ if .Values.ingress.enabled }} enabled {{ else }} not enabled {{ end }}.
+
+You can access the NGINX landing page by navigating to:
+
+http://nginx.example.com
+{{- else -}}
+NGINX Ingress is not enabled.
+
+To expose the NGINX landing page, consider enabling Ingress in your values.yaml file.
+
+You can then access the NGINX landing page by navigating to:
+
+http://nginx.example.com
+{{- end }}
