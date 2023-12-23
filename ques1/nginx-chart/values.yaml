@@ -2,7 +2,7 @@ nginx:
   image:
     repository: nginx
     tag: stable
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
   service:
     type: NodePort
@@ -12,9 +12,7 @@ nginx:
 
   ingress:
     enabled: false
-    hosts:
-      - nginx.example.com
-    annotations: {}
+    host: nginx.example.com
 
   https:
     enabled: false

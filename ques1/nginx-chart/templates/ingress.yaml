@@ -5,7 +5,7 @@ metadata:
   name: {{ include "nginx-chart.fullname" . }}
 spec:
   rules:
-    - host: "nginx.example.com"
+    - host: "{{ .Values.nginx.ingress.host }}"
       http:
         paths:
           - path: /
